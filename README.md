@@ -14,3 +14,13 @@ We can do:
 
     [NSLayoutConstraint al_constrainViewProperty:subView.al_top equalToViewProperty:superView.al_top offset:10];
     [NSLayoutConstraint al_constrainViewProperty:subView.al_centerX equalToViewProperty:superView.al_centerX];
+
+**Setting min widths (and other inequalities):**
+Instead of:
+
+    [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationLessThanOrEqualTo toItem:nil attribute:nil multiplier:1.0 constant:200.0];
+
+We can do:
+
+    [NSLayoutConstraint al_constrainViewProperty:subView.al_width lessThanOrEqualToValue:200.0];
+
