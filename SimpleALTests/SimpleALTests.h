@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface AHALTests : SenTestCase
+@interface SimpleALTests : SenTestCase
 
 @end

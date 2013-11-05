@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Alex Haefner. All rights reserved.
 //
 
-#import "AHALTests.h"
+#import "SimpleALTests.h"
 
-@implementation AHALTests
+@implementation SimpleALTests
 
 - (void)setUp
 {
