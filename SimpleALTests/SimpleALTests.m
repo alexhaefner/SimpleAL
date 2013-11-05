@@ -1,6 +1,6 @@
 //
-//  AHALTests.m
-//  AHALTests
+//  SimpleALTests.m
+//  SimpleALTests
 //
 //  Created by Alex Haefner on 11/4/13.
 //  Copyright (c) 2013 Alex Haefner. All rights reserved.
