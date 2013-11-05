@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'AHAL' target in the 'AHAL' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
