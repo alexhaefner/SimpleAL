@@ -13,4 +13,4 @@ Instead of:
 We can do:
 
     [NSLayoutConstraint al_constrainViewProperty:subView.al_top equalToViewProperty:superView.al_top offset:10];
-    [NSLayoutConstraint al_constrainViewProperty:subView.al_centerX equalToViewProperty:superView.al_centerX offset:10];
+    [NSLayoutConstraint al_constrainViewProperty:subView.al_centerX equalToViewProperty:superView.al_centerX];
