@@ -55,4 +55,8 @@
     return [NSLayoutConstraint constraintWithItem:viewProperty1.view attribute:viewProperty1.attribute relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:nil multiplier:1.0 constant:value];
 }
 
+- (void)doNothing {
+    [NSLayoutConstraint constraintWithItem:viewPropertyOne.view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:viewPropertyTwo.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
+}
+
 @end
