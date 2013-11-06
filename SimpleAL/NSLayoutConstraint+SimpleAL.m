@@ -13,34 +13,46 @@
 @implementation NSLayoutConstraint (SimpleAL)
 #pragma mark - private methods
 
-+ (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewPropertyOne toViewPropertyTwo:(SimpleALViewProperty *)viewPropertyTwo relation:(NSLayoutRelation)relation offset:(CGFloat)offset {
-    return [NSLayoutConstraint constraintWithItem:viewPropertyOne.view attribute:viewPropertyOne.attribute relatedBy:relation toItem:viewPropertyTwo.view attribute:viewPropertyTwo.attribute multiplier:1.0 constant:offset];
++ (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewPropertyOne toViewPropertyTwo:(SimpleALViewProperty *)viewPropertyTwo relation:(NSLayoutRelation)relation multiplier:(CGFloat)multiplier offset:(CGFloat)offset{
+    return [NSLayoutConstraint constraintWithItem:viewPropertyOne.view attribute:viewPropertyOne.attribute relatedBy:relation toItem:viewPropertyTwo.view attribute:viewPropertyTwo.attribute multiplier:multiplier constant:offset];
 }
 
 #pragma mark - public methods
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 equalToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-    return [NSLayoutConstraint constrainViewProperty:viewProperty1 equalToViewProperty:viewProperty2 offset:0];
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 equalToViewProperty:viewProperty2 multiplier:1.0 offset:0];
 }
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 equalToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-    return [NSLayoutConstraint constrainViewProperty:viewProperty1 toViewPropertyTwo:viewProperty2 relation:NSLayoutRelationEqual offset:offset];
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 equalToViewProperty:viewProperty2 multiplier:1.0 offset:offset];
+}
+
++ (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 equalToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset {
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 toViewPropertyTwo:viewProperty2 relation:NSLayoutRelationEqual multiplier:multiplier offset:offset];
 }
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-    return [NSLayoutConstraint constrainViewProperty:viewProperty1 greaterThanOrEqualToViewProperty:viewProperty2 offset:0];
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 greaterThanOrEqualToViewProperty:viewProperty2 multiplier: 1.0 offset:0];
 }
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-    return [NSLayoutConstraint constrainViewProperty:viewProperty1 toViewPropertyTwo:viewProperty2 relation:NSLayoutRelationGreaterThanOrEqual offset:offset];
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 greaterThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:offset];
+}
+            
++ (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset {
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 toViewPropertyTwo:viewProperty2 relation:NSLayoutRelationGreaterThanOrEqual multiplier:multiplier offset:offset];
 }
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-    return [NSLayoutConstraint constrainViewProperty:viewProperty1 lessThanOrEqualToViewProperty:viewProperty2 offset:0];
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 lessThanOrEqualToViewProperty:viewProperty2 offset:0];
 }
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-    return [NSLayoutConstraint constrainViewProperty:viewProperty1 toViewPropertyTwo:viewProperty2 relation:NSLayoutRelationLessThanOrEqual offset:offset];
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 lessThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:offset];
+}
+            
++ (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFLoat)multiplier offset:(CGFloat)offset {
+    return [NSLayoutConstraint al_constrainViewProperty:viewProperty1 toViewPropertyTwo:viewProperty2 relation:NSLayoutRelationLessThanOrEqual multiplier:multiplier offset:offset];
 }
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 equalToValue:(CGFloat)value {
@@ -53,10 +65,6 @@
 
 + (NSLayoutConstraint *)al_constrainViewProperty:(SimpleALViewProperty *)viewProperty1 greaterThanOrEqualToValue:(CGFloat)value {
     return [NSLayoutConstraint constraintWithItem:viewProperty1.view attribute:viewProperty1.attribute relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:nil multiplier:1.0 constant:value];
-}
-
-- (void)doNothing {
-    [NSLayoutConstraint constraintWithItem:viewPropertyOne.view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:viewPropertyTwo.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
 }
 
 @end
