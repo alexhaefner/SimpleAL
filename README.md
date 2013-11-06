@@ -15,6 +15,12 @@ Left alight a view that is 200px wide and as tall as it's super view, all using 
     [myView.al_height lessThanOrEqualToViewProperty:superView.al_height];
     [myView.al_width lessThanOrEqualToValue:200];
 
+The equivalent autolayout expressions for the two inequality expressions above are:
+
+    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0]];
+    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqualTo toItem:superView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
+    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:0.0]];
+
 All of the al_ methods return an NSLayoutConstraint.  So doing autolayout like it was designed is super simple:
 
     @property (nonatomic, retain) NSLayoutConstraint *constraintToRemoveLater;
@@ -31,9 +37,8 @@ Inequalities, offsets, and multipliers (an important part of AutoLayout) are all
     // myView's width >= (someView's width * 2.0) + 0.0
     [myView.al_width greaterThanOrEqualToViewProperty:someView.al_width multipler:2.0 offset:0.0];
 
-The equivalent autolayout expressions are:
+The equivalent autolayout expressions for the two inequality expressions above are:
 
-    
     [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
     [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
 
