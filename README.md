@@ -15,7 +15,7 @@ Left alight a view that is 200px wide and as tall as it's super view, all using 
     [myView.al_height lessThanOrEqualToViewProperty:superView.al_height];
     [myView.al_width lessThanOrEqualToValue:200];
 
-The equivalent autolayout expressions for the two inequality expressions above are:
+The equivalent autolayout expressions for the the three respective expressions above are:
 
     [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0]];
     [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqualTo toItem:superView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
