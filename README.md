@@ -3,17 +3,19 @@ SimpleAL
 
 Simplifying autolayout
 
-There are two ways to use this framework.  The simplest way will create and apply a constraint directly to a view.  The other way is an extension and simplification that will enable you to create a constraint without applying it directly to a view.
+There are two ways to use this framework.  The simplest way will create and apply a constraint directly to a view.  The other way is an category on NSLayoutConstrain that is a simplification of the standard API.
 
 **Creating constraints and applying them directly to views**
 
-    UIView *myView, superView;
-    // left alight a view that is 200px wide and as tall as it's super view.
-    [myView.al_left equalToViewProperty:superView.al_left];
-    [myView.al_width lessThanOrEqualToValue:200];
-    [myView.al_height lessThanOrEqualToViewProperty:superView.al_height];
+Left alight a view that is 200px wide and as tall as it's super view, all using AutoLayout:
 
-All of the al_<property> methods return an NSLayoutConstraint.  So doing autolayout like it was designed is super simple:
+    UIView *myView, superView;
+
+    [myView.al_left equalToViewProperty:superView.al_left];
+    [myView.al_height lessThanOrEqualToViewProperty:superView.al_height];
+    [myView.al_width lessThanOrEqualToValue:200];
+
+All of the al_ methods return an NSLayoutConstraint.  So doing autolayout like it was designed is super simple:
 
     @property (nonatomic, retain) NSLayoutConstraint *constraintToRemoveLater;
     self.constraintToRemoveLater = [myView.al_width greaterThanOrEqualToValue:200];
@@ -26,8 +28,14 @@ Inequalities, offsets, and multipliers (an important part of AutoLayout) are all
     // Make the left of myView greater than or equal to superView.left + 10.0
     [myView.al_left greaterThanOrEqualToViewProperty:superView.al_left offset:10.0];
 
-    // myView's width = (someView's width * 2.0) + 0.0
+    // myView's width >= (someView's width * 2.0) + 0.0
     [myView.al_width greaterThanOrEqualToViewProperty:someView.al_width multipler:2.0 offset:0.0];
+
+The equivalent autolayout expressions are:
+
+    
+    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
+    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
 
 **Creating constraints using the NSLayoutConstraint category**
 
