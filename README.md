@@ -42,10 +42,6 @@ The equivalent autolayout expressions for the two inequality expressions above a
     [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
     [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
 
-**Creating constraints using the NSLayoutConstraint category**
-
-    The other way to use this library is to use the NSLayoutConstraint extensions that are made available through categories.  Use this is for some reason you do not want to apply a constraint directly to a view.
-
 **Centering a view and top aligning it within the superview (10px offset on top).**
 
 Instead of:
