@@ -3,7 +3,7 @@ SimpleAL
 
 Simplifying autolayout
 
-There are two ways to use this framework.  The simplest way will create and apply a constraint directly to a view.  The other way is an category on NSLayoutConstrain that is a simplification of the standard API.
+There is a very simple way to make constraints with this framework that is a simplification of the standard AutoLayout API.
 
 **Creating constraints and applying them directly to views**
 
@@ -11,15 +11,15 @@ Left alight a view that is 200px wide and as tall as it's super view, all using 
 
     UIView *myView, superView;
 
-    [myView.al_left equalToViewProperty:superView.al_left];
-    [myView.al_height lessThanOrEqualToViewProperty:superView.al_height];
-    [myView.al_width lessThanOrEqualToValue:200];
+    [superView addConstraint:[myView.al_left equalToViewProperty:superView.al_left]];
+    [superView addConstraint:[myView.al_height lessThanOrEqualToViewProperty:superView.al_height]];
+    [superView addConstraint:[myView.al_width lessThanOrEqualToValue:200]];
 
 The equivalent autolayout expressions for the the three respective expressions above are:
 
-    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0]];
-    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqualTo toItem:superView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
-    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqualTo toItem:superView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:0.0]];
 
 All of the al_ methods return an NSLayoutConstraint.  So doing autolayout like it was designed is super simple:
 
@@ -32,15 +32,15 @@ All of the al_ methods return an NSLayoutConstraint.  So doing autolayout like i
 Inequalities, offsets, and multipliers (an important part of AutoLayout) are all available:
 
     // Make the left of myView greater than or equal to superView.left + 10.0
-    [myView.al_left greaterThanOrEqualToViewProperty:superView.al_left offset:10.0];
+    [superView addConstraint:[myView.al_left greaterThanOrEqualToViewProperty:superView.al_left offset:10.0]];
 
     // myView's width >= (someView's width * 2.0) + 0.0
-    [myView.al_width greaterThanOrEqualToViewProperty:someView.al_width multipler:2.0 offset:0.0];
+    [superView addConstraint:[myView.al_width greaterThanOrEqualToViewProperty:someView.al_width multipler:2.0 offset:0.0]];
 
 The equivalent autolayout expressions for the two inequality expressions above are:
 
-    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
-    [myView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
 
 **Creating constraints using the NSLayoutConstraint category**
 
@@ -55,8 +55,8 @@ Instead of:
 
 We can do:
 
-    [NSLayoutConstraint al_constrainViewProperty:subView.al_top equalToViewProperty:superView.al_top offset:10];
-    [NSLayoutConstraint al_constrainViewProperty:subView.al_centerX equalToViewProperty:superView.al_centerX];
+    [subView.al_top equalToViewProperty:superView.al_top offset:10];
+    [subView.al_centerX equalToViewProperty:superView.al_centerX];
 
 **Setting min widths (and other inequalities):**
 
@@ -66,7 +66,7 @@ Instead of:
 
 We can do:
 
-    [NSLayoutConstraint al_constrainViewProperty:subView.al_width lessThanOrEqualToValue:200.0];
+    [subView.al_width lessThanOrEqualToValue:200.0];
 
 Instead of:
 
@@ -74,5 +74,5 @@ Instead of:
 
 We can do:
 
-    [NSLayoutConstraint al_constrainViewProperty:subview.al_right lessThanOrEqualToViewProperty:parentView.al_right offset:10.0];
+    [subview.al_right lessThanOrEqualToViewProperty:parentView.al_right offset:10.0];
 

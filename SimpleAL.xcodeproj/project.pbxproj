@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B22AAC371828B02B00772FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC361828B02B00772FDD /* Foundation.framework */; };
 		B22AAC461828B02B00772FDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC451828B02B00772FDD /* SenTestingKit.framework */; };
-		B22AAC481828B02B00772FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC471828B02B00772FDD /* UIKit.framework */; };
 		B22AAC491828B02B00772FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC361828B02B00772FDD /* Foundation.framework */; };
 		B22AAC4C1828B02B00772FDD /* libSimpleAL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC331828B02B00772FDD /* libSimpleAL.a */; };
 		B22AAC811828DBE600772FDD /* NSLayoutConstraint+SimpleAL.m in Sources */ = {isa = PBXBuildFile; fileRef = B22AAC791828DBE600772FDD /* NSLayoutConstraint+SimpleAL.m */; };
@@ -17,6 +16,8 @@
 		B22AAC831828DBE600772FDD /* SimpleALViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B22AAC7E1828DBE600772FDD /* SimpleALViewProperty.m */; };
 		B22AAC841828DBE600772FDD /* UIView+SimpleAL.m in Sources */ = {isa = PBXBuildFile; fileRef = B22AAC801828DBE600772FDD /* UIView+SimpleAL.m */; };
 		B22AAC8B1828DBFD00772FDD /* SimpleALTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B22AAC8A1828DBFD00772FDD /* SimpleALTests.m */; };
+		B22AAC9B182CB7CC00772FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC9A182CB7CC00772FDD /* UIKit.framework */; };
+		B22AAC9C182CB7D200772FDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC451828B02B00772FDD /* SenTestingKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 		B22AAC361828B02B00772FDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B22AAC441828B02B00772FDD /* SimpleALTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleALTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22AAC451828B02B00772FDD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B22AAC471828B02B00772FDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B22AAC781828DBE600772FDD /* NSLayoutConstraint+SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+SimpleAL.h"; sourceTree = "<group>"; };
 		B22AAC791828DBE600772FDD /* NSLayoutConstraint+SimpleAL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+SimpleAL.m"; sourceTree = "<group>"; };
 		B22AAC7A1828DBE600772FDD /* SimpleAL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleAL-Prefix.pch"; sourceTree = "<group>"; };
@@ -60,6 +60,7 @@
 		B22AAC881828DBFD00772FDD /* SimpleALTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleALTests-Info.plist"; sourceTree = "<group>"; };
 		B22AAC891828DBFD00772FDD /* SimpleALTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALTests.h; sourceTree = "<group>"; };
 		B22AAC8A1828DBFD00772FDD /* SimpleALTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleALTests.m; sourceTree = "<group>"; };
+		B22AAC9A182CB7CC00772FDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22AAC9C182CB7D200772FDD /* SenTestingKit.framework in Frameworks */,
+				B22AAC9B182CB7CC00772FDD /* UIKit.framework in Frameworks */,
 				B22AAC371828B02B00772FDD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B22AAC461828B02B00772FDD /* SenTestingKit.framework in Frameworks */,
-				B22AAC481828B02B00772FDD /* UIKit.framework in Frameworks */,
 				B22AAC491828B02B00772FDD /* Foundation.framework in Frameworks */,
 				B22AAC4C1828B02B00772FDD /* libSimpleAL.a in Frameworks */,
 			);
@@ -107,9 +109,9 @@
 		B22AAC351828B02B00772FDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B22AAC9A182CB7CC00772FDD /* UIKit.framework */,
 				B22AAC361828B02B00772FDD /* Foundation.framework */,
 				B22AAC451828B02B00772FDD /* SenTestingKit.framework */,
-				B22AAC471828B02B00772FDD /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,9 +342,13 @@
 		B22AAC591828B02B00772FDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/AHAL.dst;
+				DSTROOT = /tmp/SimpleAL.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHAL/SimpleAL-Prefix.pch";
+				GCC_PREFIX_HEADER = "SimpleAL/SimpleAL-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleAL;
 				SKIP_INSTALL = YES;
@@ -352,9 +358,13 @@
 		B22AAC5A1828B02B00772FDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/AHAL.dst;
+				DSTROOT = /tmp/SimpleAL.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHAL/SimpleAL-Prefix.pch";
+				GCC_PREFIX_HEADER = "SimpleAL/SimpleAL-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleAL;
 				SKIP_INSTALL = YES;

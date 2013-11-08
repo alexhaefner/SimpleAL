@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Alex Haefner. All rights reserved.
 //
 
-#import "UIView+AHAL.h"
+#import "UIView+SimpleAL.h"
 #import "SimpleALViewProperty.h"
 
 @implementation UIView (SimpleAL)
