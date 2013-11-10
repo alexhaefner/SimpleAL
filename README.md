@@ -1,9 +1,7 @@
 SimpleAL
 ========
 
-Simplifying autolayout
-
-There is a very simple way to make constraints with this framework that is a simplification of the standard AutoLayout API.
+Simplifying AutoLayout
 
 **Creating constraints and applying them directly to views**
 
