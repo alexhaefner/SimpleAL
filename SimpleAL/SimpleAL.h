@@ -6,8 +6,5 @@
 //  Copyright (c) 2013 Alex Haefner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface SimpleAL : NSObject
-
-@end
+#import "SimpleALViewProperty.h"
+#import "UIView+SimpleAL.h"
