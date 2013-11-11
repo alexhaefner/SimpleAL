@@ -3,40 +3,6 @@ SimpleAL
 
 Simplifying AutoLayout
 
-**UIView, NSArray extensions**
-
-SimpleAL uses SimpleALViewProperty, a class that makes UIView/NSArray(of UIView) attributes map directly to NSLayoutAttributes.  The following are available on any UIView class/subclass, and any NSArray:
-
-    al_left
-    al_right
-    al_top
-    al_bottom
-    al_centerX
-    al_centerY
-    al_leading
-    al_baseline
-    al_trailing
-    al_width
-    al_height
-
-These methods can be used to create NSLayoutConstraint constraints to other view properties:
-
-    - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2;
-    - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset;
-    - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset;
-
-    - (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2;
-    - (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset;
-    - (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset;
-
-    - (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2;
-    - (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset;
-    - (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset;
-
-    - (NSLayoutConstraint *)equalToValue:(CGFloat)value;
-    - (NSLayoutConstraint *)lessThanOrEqualToValue:(CGFloat)value;
-    - (NSLayoutConstraint *)greaterThanOrEqualToValue:(CGFloat)value;
-
 **Creating constraints and applying them directly to views**
 
 Left alight a view that is 200px wide and as tall as it's super view, all using AutoLayout:
