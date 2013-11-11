@@ -95,7 +95,7 @@ Setting a relationship between UIViews that are in a list (i.e. each view's bott
 
 The corresponding standard AutoLayout code for this is a mess and is not included below.  This enumeration is equivalent to doing the following:
 
-    [nameView.al_bottom equalToViewProperty:userProfileView.al_top offset:10.0];
-    [userProfileView.al_bottom equalToViewProperty:userLocationView.al_top offset:10.0];
-    [userLocationView.al_bottom equalToViewProperty:userHabitsView.al_top offset:10.0];
-    [userHabitsView.al_bottom equalToViewProperty:userHobbiesView.al_top offset:10.0];
+    [superView addConstraints:@[[nameView.al_bottom equalToViewProperty:userProfileView.al_top offset:10.0];
+        [userProfileView.al_bottom equalToViewProperty:userLocationView.al_top offset:10.0];
+        [userLocationView.al_bottom equalToViewProperty:userHabitsView.al_top offset:10.0];
+        [userHabitsView.al_bottom equalToViewProperty:userHobbiesView.al_top offset:10.0]];
