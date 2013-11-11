@@ -10,6 +10,8 @@
 		215D01C218302E300052C6AC /* SimpleAL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B22AAC7B1828DBE600772FDD /* SimpleAL.h */; };
 		215D01C318302E330052C6AC /* SimpleALViewProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B22AAC7D1828DBE600772FDD /* SimpleALViewProperty.h */; };
 		215D01C418302E360052C6AC /* UIView+SimpleAL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B22AAC7F1828DBE600772FDD /* UIView+SimpleAL.h */; };
+		2184970B18305377001BCB17 /* NSArray+SimpleAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2184970A18305377001BCB17 /* NSArray+SimpleAL.m */; };
+		2184970C1830564A001BCB17 /* NSArray+SimpleAL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2184970918305377001BCB17 /* NSArray+SimpleAL.h */; };
 		B22AAC371828B02B00772FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC361828B02B00772FDD /* Foundation.framework */; };
 		B22AAC461828B02B00772FDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC451828B02B00772FDD /* SenTestingKit.framework */; };
 		B22AAC491828B02B00772FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC361828B02B00772FDD /* Foundation.framework */; };
@@ -38,6 +40,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				2184970C1830564A001BCB17 /* NSArray+SimpleAL.h in CopyFiles */,
 				215D01C418302E360052C6AC /* UIView+SimpleAL.h in CopyFiles */,
 				215D01C318302E330052C6AC /* SimpleALViewProperty.h in CopyFiles */,
 				215D01C218302E300052C6AC /* SimpleAL.h in CopyFiles */,
@@ -47,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2184970918305377001BCB17 /* NSArray+SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SimpleAL.h"; sourceTree = "<group>"; };
+		2184970A18305377001BCB17 /* NSArray+SimpleAL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SimpleAL.m"; sourceTree = "<group>"; };
 		B22AAC331828B02B00772FDD /* libSimpleAL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleAL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22AAC361828B02B00772FDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B22AAC441828B02B00772FDD /* SimpleALTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleALTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +142,8 @@
 				B22AAC7B1828DBE600772FDD /* SimpleAL.h */,
 				B22AAC7D1828DBE600772FDD /* SimpleALViewProperty.h */,
 				B22AAC7E1828DBE600772FDD /* SimpleALViewProperty.m */,
+				2184970918305377001BCB17 /* NSArray+SimpleAL.h */,
+				2184970A18305377001BCB17 /* NSArray+SimpleAL.m */,
 				B22AAC7F1828DBE600772FDD /* UIView+SimpleAL.h */,
 				B22AAC801828DBE600772FDD /* UIView+SimpleAL.m */,
 			);
@@ -254,6 +261,7 @@
 				B22AAC811828DBE600772FDD /* NSLayoutConstraint+SimpleAL.m in Sources */,
 				B22AAC831828DBE600772FDD /* SimpleALViewProperty.m in Sources */,
 				B22AAC841828DBE600772FDD /* UIView+SimpleAL.m in Sources */,
+				2184970B18305377001BCB17 /* NSArray+SimpleAL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

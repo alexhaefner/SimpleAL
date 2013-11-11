@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7E4A1EE3-5B7B-4D2E-A5A5-C1392B8C93AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimpleAL</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>939D28B8-E18C-47D0-9504-462FB1C9DBAF</key>
+		<string>ssh://github.com/alexhaefner/SimpleAL.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SimpleAL.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>939D28B8-E18C-47D0-9504-462FB1C9DBAF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/alexhaefner/SimpleAL.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>939D28B8-E18C-47D0-9504-462FB1C9DBAF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>939D28B8-E18C-47D0-9504-462FB1C9DBAF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SimpleAL</string>
+		</dict>
+	</array>
+</dict>
+</plist>
