@@ -5,7 +5,7 @@ Simplifying AutoLayout
 
 **Creating constraints and applying them directly to views**
 
-Left alight a view that is 200px wide and as tall as it's super view, all using AutoLayout:
+Left align a view that is 200px wide and as tall as its superview, all using AutoLayout:
 
     UIView *myView, superView;
 
@@ -19,7 +19,7 @@ The equivalent autolayout expressions for the the three respective expressions a
     [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqualTo toItem:superView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
     [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:0.0]];
 
-All of the al_ methods return an NSLayoutConstraint.  So doing autolayout like it was designed is super simple:
+All of the al_ methods return an NSLayoutConstraint.  So doing autolayout as it was designed is simple:
 
     @property (nonatomic, retain) NSLayoutConstraint *constraintToRemoveLater;
     self.constraintToRemoveLater = [myView.al_width greaterThanOrEqualToValue:200];
@@ -40,7 +40,7 @@ The equivalent autolayout expressions for the two inequality expressions above a
     [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
     [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
 
-**Centering a view and top aligning it within the superview (10px offset on top).**
+**Centering a view and top aligning it within its superview (10px offset on top).**
 
 Instead of:
 
@@ -73,7 +73,7 @@ We can do:
 
 **NSArray Utility Methods**
 
-Want to set some property on a large number of views at once?  You're in luck! NSArray has been extended to allow you to set a property on a large number of UIViews and UIView subclasses at once.  If an object is not a UIView or its subclass, then SimpleAL will assert.
+Want to set some property on a large number of views at once?  You're in luck! SimpleAL extends NSArray to allow you to set a property on a large number of UIViews all at once.  If an object is not a UIView , then SimpleAL will assert.
 
     [parentView addConstraints:[@[viewOne, viewTwo, viewThree].al_left greaterThanOrEqualToViewProperty:parentView.al_left]];
     [parentView addConstraints:[@[viewOne, viewTwo, viewThree].al_width equalToValue:200.0]];
@@ -93,7 +93,7 @@ Setting a relationship between UIViews that are in a list (i.e. each view's bott
         }];
     [superView addConstraints:constraints];
 
-The corresponding standard AutoLayout code for this is a mess and is not included below.  This enumeration is equivalent to doing the following:
+The corresponding standard AutoLayout code for this is a mess, so the equivalent SimpleAL code is included below:
 
     [superView addConstraints:@[[userProfileView.al_top equalToViewProperty:nameView.al_bottom offset:10.0];
         [userLocationView.al_top equalToViewProperty:userProfileView.al_bottom offset:10.0];

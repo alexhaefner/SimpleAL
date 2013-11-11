@@ -1,7 +1,8 @@
 //
-// Prefix header for all source files of the 'AHAL' target in the 'AHAL' project
+// Prefix header for all source files of the 'SimpleAL' target in the 'SimpleAL' project
 //
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
 #endif

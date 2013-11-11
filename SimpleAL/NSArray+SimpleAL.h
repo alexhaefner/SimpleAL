@@ -6,10 +6,9 @@
 //  Copyright (c) 2013 Alex Haefner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 @class SimpleALViewPropertyArray;
+
+typedef NSLayoutConstraint *(^SimpleALViewEnumeratePairsBlock)(UIView *view1, UIView *view2);
 
 @interface NSArray (SimpleAL)
 

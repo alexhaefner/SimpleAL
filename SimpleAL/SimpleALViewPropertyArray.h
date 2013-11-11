@@ -6,9 +6,6 @@
 //  Copyright (c) 2013 Alex Haefner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 @class SimpleALViewProperty;
 
 @interface SimpleALViewPropertyArray : NSObject
