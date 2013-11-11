@@ -8,6 +8,8 @@
 
 @class SimpleALViewPropertyArray;
 
+typedef NSLayoutConstraint *(^SimpleALViewEnumeratePairsBlock)(UIView *view1, UIView *view2);
+
 @interface NSArray (SimpleAL)
 
 - (NSArray */*of NSLayoutConstraints */)al_enumerateViewPairsWithRelationshipBlock:(NSLayoutConstraint * (^)(UIView *viewOne, UIView *viewTwo))relationshipBlock;

@@ -15,13 +15,15 @@
 
 typedef SimpleALViewProperty *(^SimpleALPropertyForViewBlock)(UIView *view);
 
+static const NSUInteger kMinViewsForEnumeration = 3;
+
 @implementation NSArray (SimpleAL)
 
 #pragma mark - private methods
 - (SimpleALViewPropertyArray *)newViewPropertyArrayFromViewsWithBlock:(SimpleALPropertyForViewBlock)propertyForViewBlock {
   SimpleALViewPropertyArray *array = [[SimpleALViewPropertyArray alloc] init];
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-    NSAssert([obj isKindOfClass:[UIView class]], @"One of the objects passed to SimpleAL in an array was not a UIView or subclass");
+    NSAssert([obj isKindOfClass:[UIView class]], @"NSArray (SimpleAL) methods can only be called on an NSArray of UIView objects.");
     [array.simpleAlViewProperties addObject:propertyForViewBlock(obj)];
   }];
   return array;
@@ -95,19 +97,18 @@ typedef SimpleALViewProperty *(^SimpleALPropertyForViewBlock)(UIView *view);
   }];
 }
 
-- (NSArray */*of NSLayoutConstraints */)al_enumerateViewPairsWithRelationshipBlock:(NSLayoutConstraint * (^)(UIView *viewOne, UIView *viewTwo))relationshipBlock {
-  NSAssert([self count] > 2, @"You're not passing enough views to form relationships based on.");
-  UIView *firstView, *secondView;
-  NSMutableArray *arrayOfConstraints = [NSMutableArray array];
-  for (NSUInteger index = 0; index < [self count]; index++) {
-    if (index +1 >= [self count]) {
-      break;
+- (NSArray */*of NSLayoutConstraints */)al_enumerateViewPairsWithRelationshipBlock:(SimpleALViewEnumeratePairsBlock)enumeratePairsBlock {
+  NSAssert([self count] >= kMinViewsForEnumeration, @"Invalid number of views for %s. You must pass in at least %d views.", __func__, kMinViewsForEnumeration);
+  UIView *firstView = nil, *secondView = nil;
+  NSMutableArray *arrayOfConstraints = [NSMutableArray arrayWithCapacity:[self count] - 1];
+  for (UIView *view in self) {
+    secondView = view;
+    if (firstView && secondView) {
+      NSLayoutConstraint *constraint = enumeratePairsBlock(firstView, secondView);
+      NSAssert(constraint != nil, @"The enumeratePairsBlock passed to %s must return a constraint.", __func__);
+      [arrayOfConstraints addObject:constraint];
     }
-    firstView = self[index];
-    secondView = self[index + 1];
-    NSLayoutConstraint *constraint = relationshipBlock(firstView, secondView);
-    NSAssert(constraint != nil, @"The relationshipBlock passed to al_enumerateViewPairsWithRelationshipBlock does not return a constraint");
-    [arrayOfConstraints addObject:constraint];
+    firstView = secondView;
   }
   return arrayOfConstraints;
 }
