@@ -56,7 +56,6 @@
 		2184970A18305377001BCB17 /* NSArray+SimpleAL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SimpleAL.m"; sourceTree = "<group>"; };
 		2184976618305F5E001BCB17 /* SimpleALViewPropertyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALViewPropertyArray.h; sourceTree = "<group>"; };
 		2184976718305F5E001BCB17 /* SimpleALViewPropertyArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleALViewPropertyArray.m; sourceTree = "<group>"; };
-		2184976918305F88001BCB17 /* SimpleALView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALView.h; sourceTree = "<group>"; };
 		2184976A18306207001BCB17 /* SimpleALViewPropertyArray+AddObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleALViewPropertyArray+AddObject.h"; sourceTree = "<group>"; };
 		2184976B18306207001BCB17 /* SimpleALViewPropertyArray+AddObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SimpleALViewPropertyArray+AddObject.m"; sourceTree = "<group>"; };
 		2184976D18306276001BCB17 /* SimpleALViewPropertyArray_InternalArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALViewPropertyArray_InternalArray.h; sourceTree = "<group>"; };
@@ -155,7 +154,6 @@
 				2184976D18306276001BCB17 /* SimpleALViewPropertyArray_InternalArray.h */,
 				2184976618305F5E001BCB17 /* SimpleALViewPropertyArray.h */,
 				2184976718305F5E001BCB17 /* SimpleALViewPropertyArray.m */,
-				2184976918305F88001BCB17 /* SimpleALView.h */,
 				2184970918305377001BCB17 /* NSArray+SimpleAL.h */,
 				2184970A18305377001BCB17 /* NSArray+SimpleAL.m */,
 				B22AAC7F1828DBE600772FDD /* UIView+SimpleAL.h */,
