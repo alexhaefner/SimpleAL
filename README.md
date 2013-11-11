@@ -89,13 +89,13 @@ An equivalent standard AutoLayout expression for just the bottom line is (somewh
 Setting a relationship between UIViews that are in a list (i.e. each view's bottom is related to the subsequent view's top) is very simple:
 
     NSArray *constraints = [@[nameView, userProfileView, userLocationView, userHabitsView, userHobbiesView] al_enumerateViewPairsWithRelationshipBlock:(NSLayoutContraint *) ^(UIView *firstView, UIView *secondView) {
-        return [firstView.al_bottom equalToViewProperty:secondView.al_top offset:10.0];
+        return [secondView.al_top equalToViewProperty:firstView.al_bottom offset:10.0];
         }];
     [superView addConstraints:constraints];
 
 The corresponding standard AutoLayout code for this is a mess and is not included below.  This enumeration is equivalent to doing the following:
 
-    [superView addConstraints:@[[nameView.al_bottom equalToViewProperty:userProfileView.al_top offset:10.0];
-        [userProfileView.al_bottom equalToViewProperty:userLocationView.al_top offset:10.0];
-        [userLocationView.al_bottom equalToViewProperty:userHabitsView.al_top offset:10.0];
-        [userHabitsView.al_bottom equalToViewProperty:userHobbiesView.al_top offset:10.0]];
+    [superView addConstraints:@[[userProfileView.al_top equalToViewProperty:nameView.al_bottom offset:10.0];
+        [userLocationView.al_top equalToViewProperty:userProfileView.al_bottom offset:10.0];
+        [userHabitsView.al_top equalToViewProperty:userLocationView.al_bottom offset:10.0];
+        [userHobbiesView.al_bop equalToViewProperty:userHabitsView.al_bottom offset:10.0]];
