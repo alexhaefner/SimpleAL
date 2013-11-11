@@ -70,3 +70,13 @@ We can do:
 
     [subview.al_right lessThanOrEqualToViewProperty:parentView.al_right offset:10.0];
 
+
+** NSArray Utility Methods **
+
+Want to set some property on a large number of views at once?  You're in luck!
+
+    [parentView addConstraints:[@[viewOne.al_left, viewTwo.al_left, viewThree.al_left] al_greaterThanOrEqualToViewProperty:parentView.al_left]];
+
+The NSArray category methods are the same method names as the al_ methods above, except they're prefixed with al_.
+
+    [parentView addConstraints:[@[viewOne.al_width, viewTwo.al_width, viewThree.al_width] al_equalToValue:200.0]];
