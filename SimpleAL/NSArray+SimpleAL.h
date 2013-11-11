@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class SimpleALViewPropertyArray;
 
 @interface NSArray (SimpleAL)
 
+- (NSArray */*of NSLayoutConstraints */)al_enumerateViewPairsWithRelationshipBlock:(NSLayoutConstraint * (^)(UIView *viewOne, UIView *viewTwo))relationshipBlock;
 - (SimpleALViewPropertyArray *)al_centerX;
 - (SimpleALViewPropertyArray *)al_centerY;
 - (SimpleALViewPropertyArray *)al_baseLine;
