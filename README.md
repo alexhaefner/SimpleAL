@@ -5,7 +5,7 @@ Simplifying AutoLayout
 
 **Creating constraints and applying them directly to views**
 
-Left alight a view that is 200px wide and as tall as its superview, all using AutoLayout:
+Left align a view that is 200px wide and as tall as its superview, all using AutoLayout:
 
     UIView *myView, superView;
 
