@@ -9,3 +9,4 @@
 #import "SimpleALViewProperty.h"
 #import "UIView+SimpleAL.h"
 #import "NSArray+SimpleAL.h"
+#import "SimpleALViewPropertyArray.h"

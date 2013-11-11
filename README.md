@@ -71,12 +71,15 @@ We can do:
     [subview.al_right lessThanOrEqualToViewProperty:parentView.al_right offset:10.0];
 
 
-** NSArray Utility Methods **
+**NSArray Utility Methods**
 
-Want to set some property on a large number of views at once?  You're in luck!
+Want to set some property on a large number of views at once?  You're in luck! NSArray has been extended to allow you to set a property on a large number of UIViews and UIView subclasses at once.  If an object is not a UIView or its subclass, then SimpleAL will assert.
 
-    [parentView addConstraints:[@[viewOne.al_left, viewTwo.al_left, viewThree.al_left] al_greaterThanOrEqualToViewProperty:parentView.al_left]];
+    [parentView addConstraints:[@[viewOne, viewTwo, viewThree].al_left greaterThanOrEqualToViewProperty:parentView.al_left]];
+    [parentView addConstraints:[@[viewOne, viewTwo, viewThree].al_width equalToValue:200.0]];
 
-The NSArray category methods are the same method names as the al_ methods above, except they're prefixed with al_.
+An equivalent standard AutoLayout expression for just the bottom line is (somewhat disturbingly):
 
-    [parentView addConstraints:[@[viewOne.al_width, viewTwo.al_width, viewThree.al_width] al_equalToValue:200.0]];
+    [parentView addConstraints:@[[NSLayoutConstraint constraintWithItem:viewOne attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0],
+        [NSLayoutConstraint constraintWithItem:viewTwo attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0],
+        [NSLayoutConstraint constraintWithItem:viewThree attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0]]];

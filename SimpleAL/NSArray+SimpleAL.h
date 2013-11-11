@@ -8,28 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SimpleALViewProperty.h"
+@class SimpleALViewPropertyArray;
 
 @interface NSArray (SimpleAL)
 
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToViewProperty:(SimpleALViewProperty *)viewProperty2;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset;
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multipler:(CGFloat)multiplier offset:(CGFloat)offset;
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToValue:(CGFloat)value;
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToValue:(CGFloat)value;
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToValue:(CGFloat)value;
+- (SimpleALViewPropertyArray *)al_centerX;
+- (SimpleALViewPropertyArray *)al_centerY;
+- (SimpleALViewPropertyArray *)al_baseLine;
+- (SimpleALViewPropertyArray *)al_bottom;
+- (SimpleALViewPropertyArray *)al_height;
+- (SimpleALViewPropertyArray *)al_width;
+- (SimpleALViewPropertyArray *)al_top;
+- (SimpleALViewPropertyArray *)al_leading;
+- (SimpleALViewPropertyArray *)al_left;
+- (SimpleALViewPropertyArray *)al_right;
+- (SimpleALViewPropertyArray *)al_trailing;
 @end

@@ -9,75 +9,77 @@
 #import "NSArray+SimpleAL.h"
 
 #import "SimpleALViewProperty.h"
+#import "SimpleALViewPropertyArray.h"
+#import "SimpleALViewPropertyArray+AddObject.h"
+#import "UIView+SimpleAL.h"
 
 @implementation NSArray (SimpleAL)
 
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-  return [self al_equalToViewProperty:viewProperty2 multiplier:1.0 offset:0.0];
-}
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-  return [self al_equalToViewProperty:viewProperty2 multiplier:1.0 offset:offset];
-}
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset {
-  NSMutableArray *array = [NSMutableArray array];
-  for (SimpleALViewProperty *viewProperty in self) {
-    [array addObject:[viewProperty equalToViewProperty:viewProperty2 multiplier:multiplier offset:offset]];
-  }
+#pragma mark - private methods
+- (SimpleALViewPropertyArray *)createArrayFromObjectsWithBlock:(SimpleALViewProperty * (^)(UIView *view))addObjectBlock {
+  SimpleALViewPropertyArray *array = [[SimpleALViewPropertyArray alloc] init];
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    NSAssert([obj isKindOfClass:[UIView class]], @"One of the objects passed to SimpleAL in an array was not a UIView or subclass");
+    [array addObject:addObjectBlock(obj)];
+  }];
   return array;
 }
 
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-  return [self al_lessThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:0.0];
-}
+#pragma mark - public methods
 
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-  return [self al_lessThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:offset];
+- (SimpleALViewPropertyArray *)al_centerX {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_centerX;
+  }];
 }
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset {
-  NSMutableArray *array = [NSMutableArray array];
-  for (SimpleALViewProperty *viewProperty in self) {
-    [array addObject:[viewProperty lessThanOrEqualToViewProperty:viewProperty2 multiplier:multiplier offset:offset]];
-  }
-  return array;
+- (SimpleALViewPropertyArray *)al_centerY {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_centerY;
+  }];
 }
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-  return [self al_greaterThanOrEqualToViewProperty:viewProperty2 multipler:1.0 offset:0.0];
+- (SimpleALViewPropertyArray *)al_baseLine {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_baseLine;
+  }];
 }
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-  return [self al_greaterThanOrEqualToViewProperty:viewProperty2 multipler:1.0 offset:offset];
+- (SimpleALViewPropertyArray *)al_bottom {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_bottom;
+  }];
 }
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multipler:(CGFloat)multiplier offset:(CGFloat)offset {
-  NSMutableArray *array = [NSMutableArray array];
-  for (SimpleALViewProperty *viewProperty in self) {
-    [array addObject:[viewProperty greaterThanOrEqualToViewProperty:viewProperty2 multipler:multiplier offset:offset]];
-  }
-  return array;
+- (SimpleALViewPropertyArray *)al_height {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_height;
+  }];
 }
-
-- (NSArray /*of NSLayoutConstraint*/ *)al_equalToValue:(CGFloat)value {
-  NSMutableArray *array = [NSMutableArray array];
-  for (SimpleALViewProperty *viewProperty in self) {
-    [array addObject:[viewProperty equalToValue:value]];
-  }
-  return array;
+- (SimpleALViewPropertyArray *)al_width {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_width;
+  }];
 }
-- (NSArray /*of NSLayoutConstraint*/ *)al_lessThanOrEqualToValue:(CGFloat)value {
-  NSMutableArray *array = [NSMutableArray array];
-  for (SimpleALViewProperty *viewProperty in self) {
-    [array addObject:[viewProperty lessThanOrEqualToValue:value]];
-  }
-  return array;
+- (SimpleALViewPropertyArray *)al_top {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_top;
+  }];
 }
-- (NSArray /*of NSLayoutConstraint*/ *)al_greaterThanOrEqualToValue:(CGFloat)value {
-  NSMutableArray *array = [NSMutableArray array];
-  for (SimpleALViewProperty *viewProperty in self) {
-    [array addObject:[viewProperty greaterThanOrEqualToValue:value]];
-  }
-  return array;
+- (SimpleALViewPropertyArray *)al_leading {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_leading;
+  }];
+}
+- (SimpleALViewPropertyArray *)al_left {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_left;
+  }];
+}
+- (SimpleALViewPropertyArray *)al_right {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_right;
+  }];
+}
+- (SimpleALViewPropertyArray *)al_trailing {
+  return [self createArrayFromObjectsWithBlock:^(UIView *view) {
+    return view.al_trailing;
+  }];
 }
 @end
