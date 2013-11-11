@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Alex Haefner. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @class SimpleALViewProperty;
 
 @interface UIView (SimpleAL)
