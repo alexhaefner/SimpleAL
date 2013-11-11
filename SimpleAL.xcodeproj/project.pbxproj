@@ -407,8 +407,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHAL/AHAL-Prefix.pch";
-				INFOPLIST_FILE = "AHALTests/SimpleALTests-Info.plist";
+				GCC_PREFIX_HEADER = "SimpleAL/SimpleAL-Prefix.pch";
+				INFOPLIST_FILE = "SimpleALTests/SimpleALTests-Info.plist";
 				PRODUCT_NAME = SimpleALTests;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -422,8 +422,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHAL/AHAL-Prefix.pch";
-				INFOPLIST_FILE = "AHALTests/SimpleALTests-Info.plist";
+				GCC_PREFIX_HEADER = "SimpleAL/SimpleAL-Prefix.pch";
+				INFOPLIST_FILE = "SimpleALTests/SimpleALTests-Info.plist";
 				PRODUCT_NAME = SimpleALTests;
 				WRAPPER_EXTENSION = octest;
 			};
