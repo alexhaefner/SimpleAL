@@ -20,8 +20,8 @@
     return self;
 }
 
-+ (SimpleALViewProperty *)attributeWithView:(UIView *)view nsLayoutAttribute:(NSLayoutAttribute)attrib {
-    return [[SimpleALViewProperty alloc] initWithView:view layoutAttribute:attrib];
++ (SimpleALViewProperty *)attributeWithView:(UIView *)view layoutAttribute:(NSLayoutAttribute)attribute {
+    return [[SimpleALViewProperty alloc] initWithView:view layoutAttribute:attribute];
 }
 
 - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 {
