@@ -10,16 +10,16 @@
 
 @interface UIView (SimpleAL)
 
-- (SimpleALViewProperty *)al_centerX;
-- (SimpleALViewProperty *)al_centerY;
-- (SimpleALViewProperty *)al_baseLine;
-- (SimpleALViewProperty *)al_bottom;
-- (SimpleALViewProperty *)al_height;
-- (SimpleALViewProperty *)al_width;
-- (SimpleALViewProperty *)al_top;
-- (SimpleALViewProperty *)al_leading;
-- (SimpleALViewProperty *)al_left;
-- (SimpleALViewProperty *)al_right;
-- (SimpleALViewProperty *)al_trailing;
+@property (readonly) SimpleALViewProperty *al_baseLine;
+@property (readonly) SimpleALViewProperty *al_bottom;
+@property (readonly) SimpleALViewProperty *al_centerX;
+@property (readonly) SimpleALViewProperty *al_centerY;
+@property (readonly) SimpleALViewProperty *al_height;
+@property (readonly) SimpleALViewProperty *al_leading;
+@property (readonly) SimpleALViewProperty *al_left;
+@property (readonly) SimpleALViewProperty *al_right;
+@property (readonly) SimpleALViewProperty *al_top;
+@property (readonly) SimpleALViewProperty *al_trailing;
+@property (readonly) SimpleALViewProperty *al_width;
 
 @end

@@ -10,7 +10,7 @@
 @property (nonatomic, strong) UIView *view;
 @property (nonatomic, assign) NSLayoutAttribute attribute;
 
-+ (SimpleALViewProperty *)attributeWithView:(UIView *)view nsLayoutAttribute:(NSLayoutAttribute)attrib;
++ (SimpleALViewProperty *)attributeWithView:(UIView *)view layoutAttribute:(NSLayoutAttribute)attribute;
 
 - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2;
 

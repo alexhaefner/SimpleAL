@@ -97,7 +97,7 @@ static const NSUInteger kMinViewsForEnumeration = 3;
   }];
 }
 
-- (NSArray */*of NSLayoutConstraints */)al_enumerateViewPairsWithRelationshipBlock:(SimpleALViewEnumeratePairsBlock)enumeratePairsBlock {
+- (NSArray */*of NSLayoutConstraints */)al_constraintsByEnumeratingViewPairsWithRelationshipBlock:(SimpleALViewEnumeratePairsBlock)enumeratePairsBlock {
   NSAssert([self count] >= kMinViewsForEnumeration, @"Invalid number of views for %s. You must pass in at least %d views.", __func__, kMinViewsForEnumeration);
   UIView *firstView = nil, *secondView = nil;
   NSMutableArray *arrayOfConstraints = [NSMutableArray arrayWithCapacity:[self count] - 1];
