@@ -22,6 +22,7 @@
 		B22AAC841828DBE600772FDD /* UIView+SimpleAL.m in Sources */ = {isa = PBXBuildFile; fileRef = B22AAC801828DBE600772FDD /* UIView+SimpleAL.m */; };
 		B22AAC9B182CB7CC00772FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC9A182CB7CC00772FDD /* UIKit.framework */; };
 		B22AAC9C182CB7D200772FDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC451828B02B00772FDD /* SenTestingKit.framework */; };
+		B24B0D47184C0B39009D6DA0 /* SimpleALViewPropertyArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2184976618305F5E001BCB17 /* SimpleALViewPropertyArray.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				B24B0D47184C0B39009D6DA0 /* SimpleALViewPropertyArray.h in CopyFiles */,
 				2184970C1830564A001BCB17 /* NSArray+SimpleAL.h in CopyFiles */,
 				215D01C418302E360052C6AC /* UIView+SimpleAL.h in CopyFiles */,
 				215D01C318302E330052C6AC /* SimpleALViewProperty.h in CopyFiles */,
