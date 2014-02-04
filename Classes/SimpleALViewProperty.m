@@ -11,17 +11,17 @@
 
 @implementation SimpleALViewProperty
 
-- (id)initWithView:(UIView *)view layoutAttribute:(NSLayoutAttribute)attrib {
+- (id)initWithView:(UIView *)view layoutAttribute:(NSLayoutAttribute)attribute {
     self = [super init];
     if (self) {
-        _attribute = attrib;
+        _attribute = attribute;
         _view = view;
     }
     return self;
 }
 
 + (SimpleALViewProperty *)attributeWithView:(UIView *)view layoutAttribute:(NSLayoutAttribute)attribute {
-    return [[SimpleALViewProperty alloc] initWithView:view layoutAttribute:attribute];
+    return [[[self class] alloc] initWithView:view layoutAttribute:attribute];
 }
 
 - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 {

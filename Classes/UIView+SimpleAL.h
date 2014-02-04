@@ -10,16 +10,16 @@
 
 @interface UIView (SimpleAL)
 
-@property (readonly) SimpleALViewProperty *al_baseLine;
-@property (readonly) SimpleALViewProperty *al_bottom;
-@property (readonly) SimpleALViewProperty *al_centerX;
-@property (readonly) SimpleALViewProperty *al_centerY;
-@property (readonly) SimpleALViewProperty *al_height;
-@property (readonly) SimpleALViewProperty *al_leading;
-@property (readonly) SimpleALViewProperty *al_left;
-@property (readonly) SimpleALViewProperty *al_right;
-@property (readonly) SimpleALViewProperty *al_top;
-@property (readonly) SimpleALViewProperty *al_trailing;
-@property (readonly) SimpleALViewProperty *al_width;
+@property (readonly, nonatomic) SimpleALViewProperty *al_baseLine;
+@property (readonly, nonatomic) SimpleALViewProperty *al_bottom;
+@property (readonly, nonatomic) SimpleALViewProperty *al_centerX;
+@property (readonly, nonatomic) SimpleALViewProperty *al_centerY;
+@property (readonly, nonatomic) SimpleALViewProperty *al_height;
+@property (readonly, nonatomic) SimpleALViewProperty *al_leading;
+@property (readonly, nonatomic) SimpleALViewProperty *al_left;
+@property (readonly, nonatomic) SimpleALViewProperty *al_right;
+@property (readonly, nonatomic) SimpleALViewProperty *al_top;
+@property (readonly, nonatomic) SimpleALViewProperty *al_trailing;
+@property (readonly, nonatomic) SimpleALViewProperty *al_width;
 
 @end

@@ -20,7 +20,8 @@ static const NSUInteger kMinViewsForEnumeration = 3;
 @implementation NSArray (SimpleAL)
 
 #pragma mark - private methods
-- (SimpleALViewPropertyArray *)newViewPropertyArrayFromViewsWithBlock:(SimpleALPropertyForViewBlock)propertyForViewBlock {
+
+- (SimpleALViewPropertyArray *)_al_newViewPropertyArrayFromViewsWithBlock:(SimpleALPropertyForViewBlock)propertyForViewBlock {
   SimpleALViewPropertyArray *array = [[SimpleALViewPropertyArray alloc] init];
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     NSAssert([obj isKindOfClass:[UIView class]], @"NSArray (SimpleAL) methods can only be called on an NSArray of UIView objects.");
@@ -32,79 +33,79 @@ static const NSUInteger kMinViewsForEnumeration = 3;
 #pragma mark - public methods
 
 - (SimpleALViewPropertyArray *)al_centerX {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_centerX;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_centerY {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_centerY;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_baseLine {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_baseLine;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_bottom {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_bottom;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_height {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_height;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_width {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_width;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_top {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_top;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_leading {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_leading;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_left {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_left;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_right {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_right;
   }];
 }
 
 - (SimpleALViewPropertyArray *)al_trailing {
-  return [self newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
+  return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
     return view.al_trailing;
   }];
 }
 
-- (NSArray */*of NSLayoutConstraints */)al_constraintsByEnumeratingViewPairsWithRelationshipBlock:(SimpleALViewEnumeratePairsBlock)enumeratePairsBlock {
+- (NSArray */*of NSLayoutConstraints */)al_constraintsByEnumeratingViewPairsWithRelationshipBlock:(SimpleALViewPairEnumerationBlock)pairEnumerationBlock {
   NSAssert([self count] >= kMinViewsForEnumeration, @"Invalid number of views for %s. You must pass in at least %d views.", __func__, kMinViewsForEnumeration);
   UIView *firstView = nil, *secondView = nil;
   NSMutableArray *arrayOfConstraints = [NSMutableArray arrayWithCapacity:[self count] - 1];
   for (UIView *view in self) {
     secondView = view;
     if (firstView && secondView) {
-      NSLayoutConstraint *constraint = enumeratePairsBlock(firstView, secondView);
+      NSLayoutConstraint *constraint = pairEnumerationBlock(firstView, secondView);
       NSAssert(constraint != nil, @"The enumeratePairsBlock passed to %s must return a constraint.", __func__);
       [arrayOfConstraints addObject:constraint];
     }
