@@ -106,7 +106,7 @@ static const NSUInteger kMinViewsForEnumeration = 3;
     secondView = view;
     if (firstView && secondView) {
       NSLayoutConstraint *constraint = pairEnumerationBlock(firstView, secondView);
-      NSAssert(constraint != nil, @"The enumeratePairsBlock passed to %s must return a constraint.", __func__);
+      NSAssert(constraint != nil, @"The pairEnumerationBlock passed to %s must return a constraint.", __func__);
       [arrayOfConstraints addObject:constraint];
     }
     firstView = secondView;
