@@ -12,7 +12,6 @@ typedef NSLayoutConstraint *(^SimpleALViewPairEnumerationBlock)(UIView *view1, U
 
 @interface NSArray (SimpleAL)
 
-- (NSArray */*of NSLayoutConstraints */)al_constraintsByEnumeratingViewPairsWithRelationshipBlock:(SimpleALViewPairEnumerationBlock)pairEnumerationBlock;
 - (SimpleALViewPropertyArray *)al_centerX;
 - (SimpleALViewPropertyArray *)al_centerY;
 - (SimpleALViewPropertyArray *)al_baseLine;
