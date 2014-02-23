@@ -25,39 +25,39 @@
 }
 
 - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-    return [NSLayoutConstraint al_constrainViewProperty:self equalToViewProperty:viewProperty2 multiplier:1.0 offset:0.0];
+    return [NSLayoutConstraint al_constrainViewProperty:self equalToViewProperty:viewProperty2 multiplier:1.0 constant:0.0];
 }
 
-- (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-    return [NSLayoutConstraint al_constrainViewProperty:self equalToViewProperty:viewProperty2 multiplier:1.0 offset:offset];
+- (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 constant:(CGFloat)offset {
+    return [NSLayoutConstraint al_constrainViewProperty:self equalToViewProperty:viewProperty2 multiplier:1.0 constant:offset];
 }
 
-- (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset {
-  return [NSLayoutConstraint al_constrainViewProperty:self equalToViewProperty:viewProperty2 multiplier:multiplier offset:offset];
+- (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier constant:(CGFloat)offset {
+  return [NSLayoutConstraint al_constrainViewProperty:self equalToViewProperty:viewProperty2 multiplier:multiplier constant:offset];
 }
 
 - (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-  return [NSLayoutConstraint al_constrainViewProperty:self lessThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:0.0];
+  return [NSLayoutConstraint al_constrainViewProperty:self lessThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 constant:0.0];
 }
 
-- (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-  return [NSLayoutConstraint al_constrainViewProperty:self lessThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:offset];
+- (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 constant:(CGFloat)offset {
+  return [NSLayoutConstraint al_constrainViewProperty:self lessThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 constant:offset];
 }
 
-- (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset {
-  return [NSLayoutConstraint al_constrainViewProperty:self lessThanOrEqualToViewProperty:viewProperty2 multiplier:multiplier offset:offset];
+- (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier constant:(CGFloat)offset {
+  return [NSLayoutConstraint al_constrainViewProperty:self lessThanOrEqualToViewProperty:viewProperty2 multiplier:multiplier constant:offset];
 }
 
 - (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 {
-    return [NSLayoutConstraint al_constrainViewProperty:self greaterThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:0.0];
+    return [NSLayoutConstraint al_constrainViewProperty:self greaterThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 constant:0.0];
 }
 
-- (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 offset:(CGFloat)offset {
-    return [NSLayoutConstraint al_constrainViewProperty:self greaterThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 offset:0.0];
+- (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 constant:(CGFloat)offset {
+    return [NSLayoutConstraint al_constrainViewProperty:self greaterThanOrEqualToViewProperty:viewProperty2 multiplier:1.0 constant:0.0];
 }
 
-- (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier offset:(CGFloat)offset {
-  return [NSLayoutConstraint al_constrainViewProperty:self greaterThanOrEqualToViewProperty:viewProperty2 multiplier:multiplier offset:offset];
+- (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2 multiplier:(CGFloat)multiplier constant:(CGFloat)offset {
+  return [NSLayoutConstraint al_constrainViewProperty:self greaterThanOrEqualToViewProperty:viewProperty2 multiplier:multiplier constant:offset];
 }
 
 - (NSLayoutConstraint *)equalToValue:(CGFloat)value {

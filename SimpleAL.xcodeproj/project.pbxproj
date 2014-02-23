@@ -18,15 +18,14 @@
 		A8E127C118A1A8F800C2D48F /* UIView+SimpleAL.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E127B218A1A8F800C2D48F /* UIView+SimpleAL.m */; };
 		A8E127C218A1A8F800C2D48F /* UIView+SimpleAL.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E127B218A1A8F800C2D48F /* UIView+SimpleAL.m */; };
 		A8E127C318A1A8F800C2D48F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8E127B418A1A8F800C2D48F /* InfoPlist.strings */; };
-		A8E127C418A1A8F800C2D48F /* SimpleALTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8E127B618A1A8F800C2D48F /* SimpleALTests-Info.plist */; };
-		A8E127C518A1A8F800C2D48F /* SimpleALTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E127B818A1A8F800C2D48F /* SimpleALTests.m */; };
 		A8E127C618A1A8F800C2D48F /* SimpleALTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E127B818A1A8F800C2D48F /* SimpleALTests.m */; };
 		B22AAC371828B02B00772FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC361828B02B00772FDD /* Foundation.framework */; };
-		B22AAC461828B02B00772FDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC451828B02B00772FDD /* SenTestingKit.framework */; };
 		B22AAC491828B02B00772FDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC361828B02B00772FDD /* Foundation.framework */; };
 		B22AAC4C1828B02B00772FDD /* libSimpleAL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC331828B02B00772FDD /* libSimpleAL.a */; };
 		B22AAC9B182CB7CC00772FDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC9A182CB7CC00772FDD /* UIKit.framework */; };
 		B22AAC9C182CB7D200772FDD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC451828B02B00772FDD /* SenTestingKit.framework */; };
+		B249A90418A9E27C00C3BF40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22AAC9A182CB7CC00772FDD /* UIKit.framework */; };
+		B249A90B18A9E87F00C3BF40 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B249A90518A9E29500C3BF40 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +53,11 @@
 /* Begin PBXFileReference section */
 		A8E127A618A1A8F800C2D48F /* NSArray+SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SimpleAL.h"; sourceTree = "<group>"; };
 		A8E127A718A1A8F800C2D48F /* NSArray+SimpleAL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SimpleAL.m"; sourceTree = "<group>"; };
-		A8E127A818A1A8F800C2D48F /* NSLayoutConstraint+SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+SimpleAL.h"; sourceTree = "<group>"; };
-		A8E127A918A1A8F800C2D48F /* NSLayoutConstraint+SimpleAL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+SimpleAL.m"; sourceTree = "<group>"; };
+		A8E127A818A1A8F800C2D48F /* NSLayoutConstraint+SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSLayoutConstraint+SimpleAL.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A8E127A918A1A8F800C2D48F /* NSLayoutConstraint+SimpleAL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSLayoutConstraint+SimpleAL.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A8E127AB18A1A8F800C2D48F /* SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAL.h; sourceTree = "<group>"; };
-		A8E127AC18A1A8F800C2D48F /* SimpleALViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALViewProperty.h; sourceTree = "<group>"; };
-		A8E127AD18A1A8F800C2D48F /* SimpleALViewProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleALViewProperty.m; sourceTree = "<group>"; };
+		A8E127AC18A1A8F800C2D48F /* SimpleALViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SimpleALViewProperty.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A8E127AD18A1A8F800C2D48F /* SimpleALViewProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SimpleALViewProperty.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A8E127AE18A1A8F800C2D48F /* SimpleALViewPropertyArray+ArrayManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleALViewPropertyArray+ArrayManipulation.h"; sourceTree = "<group>"; };
 		A8E127AF18A1A8F800C2D48F /* SimpleALViewPropertyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALViewPropertyArray.h; sourceTree = "<group>"; };
 		A8E127B018A1A8F800C2D48F /* SimpleALViewPropertyArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleALViewPropertyArray.m; sourceTree = "<group>"; };
@@ -71,9 +70,11 @@
 		A8E127C818A1A99D00C2D48F /* SimpleAL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleAL-Prefix.pch"; sourceTree = "<group>"; };
 		B22AAC331828B02B00772FDD /* libSimpleAL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleAL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22AAC361828B02B00772FDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B22AAC441828B02B00772FDD /* SimpleALTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleALTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22AAC441828B02B00772FDD /* SimpleALTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleALTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22AAC451828B02B00772FDD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B22AAC9A182CB7CC00772FDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B249A90518A9E29500C3BF40 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B29D673A18BA89DD00593F0D /* SALTestingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SALTestingUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B22AAC461828B02B00772FDD /* SenTestingKit.framework in Frameworks */,
+				B249A90B18A9E87F00C3BF40 /* XCTest.framework in Frameworks */,
+				B249A90418A9E27C00C3BF40 /* UIKit.framework in Frameworks */,
 				B22AAC491828B02B00772FDD /* Foundation.framework in Frameworks */,
 				B22AAC4C1828B02B00772FDD /* libSimpleAL.a in Frameworks */,
 			);
@@ -126,6 +128,7 @@
 				A8E127B618A1A8F800C2D48F /* SimpleALTests-Info.plist */,
 				A8E127B718A1A8F800C2D48F /* SimpleALTests.h */,
 				A8E127B818A1A8F800C2D48F /* SimpleALTests.m */,
+				B29D673A18BA89DD00593F0D /* SALTestingUtils.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -153,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B22AAC331828B02B00772FDD /* libSimpleAL.a */,
-				B22AAC441828B02B00772FDD /* SimpleALTests.octest */,
+				B22AAC441828B02B00772FDD /* SimpleALTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 		B22AAC351828B02B00772FDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B249A90518A9E29500C3BF40 /* XCTest.framework */,
 				B22AAC9A182CB7CC00772FDD /* UIKit.framework */,
 				B22AAC361828B02B00772FDD /* Foundation.framework */,
 				B22AAC451828B02B00772FDD /* SenTestingKit.framework */,
@@ -204,7 +208,7 @@
 			);
 			name = SimpleALTests;
 			productName = AHALTests;
-			productReference = B22AAC441828B02B00772FDD /* SimpleALTests.octest */;
+			productReference = B22AAC441828B02B00772FDD /* SimpleALTests.xctest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +217,7 @@
 		B22AAC2B1828B02B00772FDD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Alex Haefner";
 			};
 			buildConfigurationList = B22AAC2E1828B02B00772FDD /* Build configuration list for PBXProject "SimpleAL" */;
@@ -240,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8E127C318A1A8F800C2D48F /* InfoPlist.strings in Resources */,
-				A8E127C418A1A8F800C2D48F /* SimpleALTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +274,6 @@
 				A8E127BB18A1A8F800C2D48F /* NSLayoutConstraint+SimpleAL.m in Sources */,
 				A8E127B918A1A8F800C2D48F /* NSArray+SimpleAL.m in Sources */,
 				A8E127BD18A1A8F800C2D48F /* SimpleALViewProperty.m in Sources */,
-				A8E127C518A1A8F800C2D48F /* SimpleALTests.m in Sources */,
 				A8E127C118A1A8F800C2D48F /* UIView+SimpleAL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,14 +406,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleAL/SimpleAL-Prefix.pch";
-				INFOPLIST_FILE = "SimpleALTests/SimpleALTests-Info.plist";
+				GCC_PREFIX_HEADER = "Other Sources/SimpleAL-Prefix.pch";
+				INFOPLIST_FILE = "Tests/SimpleALTests-Info.plist";
 				PRODUCT_NAME = SimpleALTests;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -419,14 +421,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleAL/SimpleAL-Prefix.pch";
-				INFOPLIST_FILE = "SimpleALTests/SimpleALTests-Info.plist";
+				GCC_PREFIX_HEADER = "Other Sources/SimpleAL-Prefix.pch";
+				INFOPLIST_FILE = "Tests/SimpleALTests-Info.plist";
 				PRODUCT_NAME = SimpleALTests;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
