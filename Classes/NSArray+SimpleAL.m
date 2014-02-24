@@ -10,7 +10,7 @@
 
 #import "SimpleALViewProperty.h"
 #import "SimpleALViewPropertyArray.h"
-#import "SimpleALViewPropertyArray+ArrayManipulation.h"
+#import "SimpleALViewPropertyArray_Private.h"
 #import "UIView+SimpleAL.h"
 
 typedef SimpleALViewProperty *(^SimpleALPropertyForViewBlock)(UIView *view);
@@ -42,9 +42,9 @@ typedef SimpleALViewProperty *(^SimpleALPropertyForViewBlock)(UIView *view);
   }];
 }
 
-- (SimpleALViewPropertyArray *)al_baseLine {
+- (SimpleALViewPropertyArray *)al_baseline {
   return [self _al_newViewPropertyArrayFromViewsWithBlock:^(UIView *view) {
-    return view.al_baseLine;
+    return view.al_baseline;
   }];
 }
 

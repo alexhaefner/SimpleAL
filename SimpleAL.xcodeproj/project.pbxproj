@@ -58,7 +58,7 @@
 		A8E127AB18A1A8F800C2D48F /* SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAL.h; sourceTree = "<group>"; };
 		A8E127AC18A1A8F800C2D48F /* SimpleALViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SimpleALViewProperty.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A8E127AD18A1A8F800C2D48F /* SimpleALViewProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SimpleALViewProperty.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		A8E127AE18A1A8F800C2D48F /* SimpleALViewPropertyArray+ArrayManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleALViewPropertyArray+ArrayManipulation.h"; sourceTree = "<group>"; };
+		A8E127AE18A1A8F800C2D48F /* SimpleALViewPropertyArray_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALViewPropertyArray_Private.h; sourceTree = "<group>"; };
 		A8E127AF18A1A8F800C2D48F /* SimpleALViewPropertyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleALViewPropertyArray.h; sourceTree = "<group>"; };
 		A8E127B018A1A8F800C2D48F /* SimpleALViewPropertyArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleALViewPropertyArray.m; sourceTree = "<group>"; };
 		A8E127B118A1A8F800C2D48F /* UIView+SimpleAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SimpleAL.h"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		A8E127A518A1A8F800C2D48F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B29D673D18BAE0A900593F0D /* Private */,
+				B29D673D18BAE0A900593F0D /* PrivateHeaders */,
 				A8E127A618A1A8F800C2D48F /* NSArray+SimpleAL.h */,
 				A8E127A718A1A8F800C2D48F /* NSArray+SimpleAL.m */,
 				A8E127A818A1A8F800C2D48F /* NSLayoutConstraint+SimpleAL.h */,
@@ -114,7 +114,6 @@
 				A8E127AB18A1A8F800C2D48F /* SimpleAL.h */,
 				A8E127AC18A1A8F800C2D48F /* SimpleALViewProperty.h */,
 				A8E127AD18A1A8F800C2D48F /* SimpleALViewProperty.m */,
-				A8E127AE18A1A8F800C2D48F /* SimpleALViewPropertyArray+ArrayManipulation.h */,
 				A8E127AF18A1A8F800C2D48F /* SimpleALViewPropertyArray.h */,
 				A8E127B018A1A8F800C2D48F /* SimpleALViewPropertyArray.m */,
 				A8E127B118A1A8F800C2D48F /* UIView+SimpleAL.h */,
@@ -174,12 +173,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B29D673D18BAE0A900593F0D /* Private */ = {
+		B29D673D18BAE0A900593F0D /* PrivateHeaders */ = {
 			isa = PBXGroup;
 			children = (
+				A8E127AE18A1A8F800C2D48F /* SimpleALViewPropertyArray_Private.h */,
 				B29D673E18BAE0D000593F0D /* SimpleALViewProperty_Private.h */,
 			);
-			name = Private;
+			name = PrivateHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -21,7 +21,7 @@
     return [SimpleALViewProperty attributeWithView:self layoutAttribute:NSLayoutAttributeCenterY];
 }
 
-- (SimpleALViewProperty *)al_baseLine {
+- (SimpleALViewProperty *)al_baseline {
     return [SimpleALViewProperty attributeWithView:self layoutAttribute:NSLayoutAttributeBaseline];
 }
 
