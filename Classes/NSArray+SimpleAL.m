@@ -15,8 +15,6 @@
 
 typedef SimpleALViewProperty *(^SimpleALPropertyForViewBlock)(UIView *view);
 
-static const NSUInteger kMinViewsForEnumeration = 3;
-
 @implementation NSArray (SimpleAL)
 
 #pragma mark - private methods
@@ -98,19 +96,4 @@ static const NSUInteger kMinViewsForEnumeration = 3;
   }];
 }
 
-- (NSArray */*of NSLayoutConstraints */)al_constraintsByEnumeratingViewPairsWithRelationshipBlock:(SimpleALViewPairEnumerationBlock)pairEnumerationBlock {
-  NSAssert([self count] >= kMinViewsForEnumeration, @"Invalid number of views for %s. You must pass in at least %d views.", __func__, kMinViewsForEnumeration);
-  UIView *firstView = nil, *secondView = nil;
-  NSMutableArray *arrayOfConstraints = [NSMutableArray arrayWithCapacity:[self count] - 1];
-  for (UIView *view in self) {
-    secondView = view;
-    if (firstView && secondView) {
-      NSLayoutConstraint *constraint = pairEnumerationBlock(firstView, secondView);
-      NSAssert(constraint != nil, @"The pairEnumerationBlock passed to %s must return a constraint.", __func__);
-      [arrayOfConstraints addObject:constraint];
-    }
-    firstView = secondView;
-  }
-  return arrayOfConstraints;
-}
 @end
