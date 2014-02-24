@@ -75,6 +75,7 @@
 		B22AAC9A182CB7CC00772FDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B249A90518A9E29500C3BF40 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B29D673A18BA89DD00593F0D /* SALTestingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SALTestingUtils.h; sourceTree = "<group>"; };
+		B29D673E18BAE0D000593F0D /* SimpleALViewProperty_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleALViewProperty_Private.h; path = Private/SimpleALViewProperty_Private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 		A8E127A518A1A8F800C2D48F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B29D673D18BAE0A900593F0D /* Private */,
 				A8E127A618A1A8F800C2D48F /* NSArray+SimpleAL.h */,
 				A8E127A718A1A8F800C2D48F /* NSArray+SimpleAL.m */,
 				A8E127A818A1A8F800C2D48F /* NSLayoutConstraint+SimpleAL.h */,
@@ -170,6 +172,14 @@
 				B22AAC451828B02B00772FDD /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B29D673D18BAE0A900593F0D /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B29D673E18BAE0D000593F0D /* SimpleALViewProperty_Private.h */,
+			);
+			name = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

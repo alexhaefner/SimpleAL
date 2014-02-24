@@ -7,10 +7,6 @@
 //
 
 @interface SimpleALViewProperty : NSObject
-@property (nonatomic, strong) UIView *view;
-@property (nonatomic, assign) NSLayoutAttribute attribute;
-
-+ (instancetype)attributeWithView:(UIView *)view layoutAttribute:(NSLayoutAttribute)attribute;
 
 - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2;
 
