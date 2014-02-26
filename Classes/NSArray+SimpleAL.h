@@ -55,12 +55,11 @@ The SimpleAL NSArray property for the height of an array of views
 /*!
  The SimpleAL NSArray property for the leading of an array of views
  @return SimpleALViewPropertyArray representing the view property for the array of views
- @see UIFont
  */
 - (SimpleALViewPropertyArray *)al_leading;
 
 /*!
- The SimpleAL NSArray property for the height of an array of views
+ The SimpleAL NSArray property for the left of an array of views
  @return SimpleALViewPropertyArray representing the view property for the array of views
  */
 - (SimpleALViewPropertyArray *)al_left;
@@ -74,7 +73,6 @@ The SimpleAL NSArray property for the height of an array of views
 /*!
  The SimpleAL NSArray property for the trailing of an array of views
  @return SimpleALViewPropertyArray representing the view property for the array of views
- @see UIFont
  */
 - (SimpleALViewPropertyArray *)al_trailing;
 @end

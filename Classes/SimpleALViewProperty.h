@@ -18,14 +18,14 @@
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute = viewProperty2.attribute * 1.0 + 0
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @return An NSLayoutConstraint representing the equality expression
  */
 - (NSLayoutConstraint *)equalToViewProperty:(SimpleALViewProperty *)viewProperty2;
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute = viewProperty2.attribute * 1.0 + constant
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @param constant The constant in the above equation
  @return An NSLayoutConstraint representing the equality expression
  */
@@ -33,7 +33,7 @@
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute = viewProperty2.attribute * multiplier + constant
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @param multipler The multiplier in the above equation
  @param constant The constant in the above equation
  @return An NSLayoutConstraint representing the equality expression
@@ -42,14 +42,14 @@
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute <= viewProperty2.attribute * 1.0 + 0.0
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @return An NSLayoutConstraint representing the equality expression
  */
 - (NSLayoutConstraint *)lessThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2;
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute <= viewProperty2.attribute * 1.0 + constant
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @param constant The constant in the above equation
  @return An NSLayoutConstraint representing the equality expression
  */
@@ -57,7 +57,7 @@
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute <= viewProperty2.attribute * multiplier + constant
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @param multipler The multiplier in the above equation
  @param constant The constant in the above equation
  @return An NSLayoutConstraint representing the equality expression
@@ -66,14 +66,14 @@
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute >= viewProperty2.attribute * 1.0 + 0.0
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @return An NSLayoutConstraint representing the equality expression
  */
 - (NSLayoutConstraint *)greaterThanOrEqualToViewProperty:(SimpleALViewProperty *)viewProperty2;
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute >= viewProperty2.attribute * 1.0 + constant
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @param constant The constant in the above equation
  @return An NSLayoutConstraint representing the equality expression
  */
@@ -81,7 +81,7 @@
 
 /*!
  An NSLayoutConstraint of the equation: self.attribute >= viewProperty2.attribute * multiplier + constant
- @param viewProperty2 The SimpleALViewProperty property to set the current instance's view and attribute equal to.
+ @param viewProperty2 The SimpleALViewProperty represented in the above formula
  @param multipler The multiplier in the above equation
  @param constant The constant in the above equation
  @return An NSLayoutConstraint representing the equality expression
