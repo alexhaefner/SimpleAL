@@ -9,7 +9,7 @@
 #import "UIView+SimpleAL.h"
 
 #import "SimpleALViewProperty.h"
-#import "SimpleALViewProperty_Private.h"
+#import "SimpleALViewPropertyPrivate.h"
 
 @implementation UIView (SimpleAL)
 

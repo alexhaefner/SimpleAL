@@ -1,5 +1,5 @@
 //
-//  SimpleALViewPropertyArray_Private.h
+//  SimpleALViewPropertyArrayPrivate.h
 //  SimpleAL
 //
 //  Created by Benjamin Asher on 11/10/13.

@@ -10,7 +10,7 @@
 
 #import "SimpleALViewProperty.h"
 #import "SimpleALViewPropertyArray.h"
-#import "SimpleALViewPropertyArray_Private.h"
+#import "SimpleALViewPropertyArrayPrivate.h"
 #import "UIView+SimpleAL.h"
 
 typedef SimpleALViewProperty *(^SimpleALPropertyForViewBlock)(UIView *view);

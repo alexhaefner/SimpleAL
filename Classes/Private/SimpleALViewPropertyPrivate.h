@@ -1,5 +1,5 @@
 //
-//  SimpleALViewProperty_Private.h
+//  SimpleALViewPropertyPrivate.h
 //  SimpleAL
 //
 //  Created by Alex Haefner on 2/23/14.
