@@ -7,7 +7,9 @@
 //
 
 #import "UIView+SimpleAL.h"
+
 #import "SimpleALViewProperty.h"
+#import "SimpleALViewPropertyPrivate.h"
 
 @implementation UIView (SimpleAL)
 
@@ -19,7 +21,7 @@
     return [SimpleALViewProperty attributeWithView:self layoutAttribute:NSLayoutAttributeCenterY];
 }
 
-- (SimpleALViewProperty *)al_baseLine {
+- (SimpleALViewProperty *)al_baseline {
     return [SimpleALViewProperty attributeWithView:self layoutAttribute:NSLayoutAttributeBaseline];
 }
 

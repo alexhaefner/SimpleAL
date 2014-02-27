@@ -7,7 +7,9 @@
 //
 
 #import "NSLayoutConstraint+SimpleAL.h"
+
 #import "SimpleALViewProperty.h"
+#import "SimpleALViewPropertyPrivate.h"
 #import "UIView+SimpleAL.h"
 
 @implementation NSLayoutConstraint (SimpleAL)

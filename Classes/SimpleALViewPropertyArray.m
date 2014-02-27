@@ -7,7 +7,7 @@
 //
 
 #import "SimpleALViewPropertyArray.h"
-#import "SimpleALViewPropertyArray+ArrayManipulation.h"
+#import "SimpleALViewPropertyArrayPrivate.h"
 
 #import "SimpleALViewProperty.h"
 
