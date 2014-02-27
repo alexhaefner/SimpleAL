@@ -99,7 +99,7 @@
 - (void)testConstraintsEqualForBaselineLessThanOrEqualToTop
 // leftView.baseline <= rightView.top * 2.0 + 1.0
 {
-    NSLayoutConstraint *simpleAlConstraint = [self.leftView.al_baseLine lessThanOrEqualToViewProperty:self.rightView.al_top multiplier:2.0 constant:1.0];
+    NSLayoutConstraint *simpleAlConstraint = [self.leftView.al_baseline lessThanOrEqualToViewProperty:self.rightView.al_top multiplier:2.0 constant:1.0];
     NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeBaseline relatedBy:NSLayoutRelationLessThanOrEqual toItem:self.rightView attribute:NSLayoutAttributeTop multiplier:2.0 constant:1.0];
     SALTAssertConstraintsEqual(simpleAlConstraint, standardConstraint);
 }
