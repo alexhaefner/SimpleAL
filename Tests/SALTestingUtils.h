@@ -16,5 +16,5 @@
     XCTAssertEqual([firstConstraint secondAttribute], [secondConstraint secondAttribute], @"The constraints have different second attributes, but should have the same second attributes"); \
     XCTAssert(([firstConstraint relation] == [secondConstraint relation]), @"The constraints have different relationship values"); \
     XCTAssert(([(NSLayoutConstraint *)firstConstraint multiplier] == [(NSLayoutConstraint *)secondConstraint multiplier]), @"The constraints have different multipliers"); \
-    XCTAssert(([(NSLayoutConstraint *)firstConstraint constant] == [(NSLayoutConstraint *)secondConstraint constant]), @"The constraints have different multipliers"); \
+    XCTAssert(([(NSLayoutConstraint *)firstConstraint constant] == [(NSLayoutConstraint *)secondConstraint constant]), @"The constraints have different constants"); \
 })
