@@ -32,6 +32,30 @@
     [super tearDown];
 }
 
+- (void)testConstraintsEqualForDefaultInputs
+// tests the default values for equalToViewProperty:
+{
+    NSLayoutConstraint *simpleALConstraint = [self.leftView.al_left equalToViewProperty:self.rightView.al_left];
+    NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.rightView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
+    SALTAssertConstraintsEqual(simpleALConstraint, standardConstraint);
+}
+
+- (void)testConstraintsGreaterThanOrEqualForDefaultInputs
+// tests the default values for greaterThanOrEqualToViewProperty:
+{
+    NSLayoutConstraint *simpleALConstraint = [self.leftView.al_left greaterThanOrEqualToViewProperty:self.rightView.al_left];
+    NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.rightView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
+    SALTAssertConstraintsEqual(simpleALConstraint, standardConstraint);
+}
+
+- (void)testConstraintsLessThanOrEqualForDefaultInputs
+// tests the default values for lessThanOrEqualToViewProperty:
+{
+    NSLayoutConstraint *simpleALConstraint = [self.leftView.al_left lessThanOrEqualToViewProperty:self.rightView.al_left];
+    NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationLessThanOrEqual toItem:self.rightView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
+    SALTAssertConstraintsEqual(simpleALConstraint, standardConstraint);
+}
+
 - (void)testConstraintsEqualForLeftEqualToRight
 // leftView.left = rightView.right * 2.0 + 0.5
 {
@@ -65,18 +89,18 @@
 }
 
 - (void)testConstraintsEqualForCenterXGreaterThanOrEqualToCenterY
-// leftView.centerX >= rightView.centerY * 1.0 + 0.0
+// leftView.centerX >= rightView.centerY * 2.0 + 1.0
 {
-    NSLayoutConstraint *simpleAlConstraint = [self.leftView.al_centerX greaterThanOrEqualToViewProperty:self.rightView.al_centerY multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.rightView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *simpleAlConstraint = [self.leftView.al_centerX greaterThanOrEqualToViewProperty:self.rightView.al_centerY multiplier:2.0 constant:1.0];
+    NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.rightView attribute:NSLayoutAttributeCenterY multiplier:2.0 constant:1.0];
     SALTAssertConstraintsEqual(simpleAlConstraint, standardConstraint);
 }
 
 - (void)testConstraintsEqualForBaselineLessThanOrEqualToTop
-// leftView.baseline <= rightView.top * 3.0 + 1.5
+// leftView.baseline <= rightView.top * 2.0 + 1.0
 {
-    NSLayoutConstraint *simpleAlConstraint = [self.leftView.al_baseline lessThanOrEqualToViewProperty:self.rightView.al_top multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeBaseline relatedBy:NSLayoutRelationLessThanOrEqual toItem:self.rightView attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *simpleAlConstraint = [self.leftView.al_baseLine lessThanOrEqualToViewProperty:self.rightView.al_top multiplier:2.0 constant:1.0];
+    NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeBaseline relatedBy:NSLayoutRelationLessThanOrEqual toItem:self.rightView attribute:NSLayoutAttributeTop multiplier:2.0 constant:1.0];
     SALTAssertConstraintsEqual(simpleAlConstraint, standardConstraint);
 }
 
@@ -97,7 +121,7 @@
 }
 
 - (void)testConstraintsEqualForWidthGreaterThanOrEqualToConstant
-// leftView.height >= 105.3
+// leftView.width >= 105.3
 {
     NSLayoutConstraint *simpleAlConstraint = [self.leftView.al_width greaterThanOrEqualToValue:105.3];
     NSLayoutConstraint *standardConstraint = [NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:105.3];
