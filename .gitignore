@@ -1,2 +1,4 @@
-SimpleAL.xcodeproj/project.xcworkspace/xcshareddata/SimpleAL.xccheckout
-SimpleAL.xcodeproj/project.xcworkspace/xcshareddata/
+SimpleAL.xcodeproj/xcuserdata
+SimpleAL.xcodeproj/project.xcworkspace/
+*.DS_Store
+*.xccheckout

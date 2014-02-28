@@ -66,17 +66,3 @@ An equivalent standard AutoLayout expression for just the bottom line is (somewh
     [parentView addConstraints:@[[NSLayoutConstraint constraintWithItem:viewOne attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0],
         [NSLayoutConstraint constraintWithItem:viewTwo attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0],
         [NSLayoutConstraint constraintWithItem:viewThree attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0]]];
-
-Setting up constraints between sibling views is a common operation, and it's easy with SimpleAL. The following SimpleAL code generates constraints that express that each view in the array will be above the next consecutive view in the array:
-
-    NSArray *constraints = [@[nameView, userProfileView, userLocationView, userHabitsView, userHobbiesView] al_constraintsByEnumeratingViewPairsWithRelationshipBlock:(NSLayoutContraint *) ^(UIView *firstView, UIView *secondView) {
-        return [secondView.al_top equalToViewProperty:firstView.al_bottom offset:10.0];
-        }];
-    [superView addConstraints:constraints];
-
-The Auto Layout code to generate these constraints this is a mess, but the equivalent SimpleAL code without using the convenience method would be the following:
-
-    [superView addConstraints:@[[userProfileView.al_top equalToViewProperty:nameView.al_bottom offset:10.0];
-        [userLocationView.al_top equalToViewProperty:userProfileView.al_bottom offset:10.0];
-        [userHabitsView.al_top equalToViewProperty:userLocationView.al_bottom offset:10.0];
-        [userHobbiesView.al_bop equalToViewProperty:userHabitsView.al_bottom offset:10.0]];
