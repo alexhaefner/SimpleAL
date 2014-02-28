@@ -391,7 +391,7 @@
 		B22AAC591828B02B00772FDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
 				DSTROOT = /tmp/SimpleAL.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,7 +408,7 @@
 		B22AAC5A1828B02B00772FDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = armv7;
 				DSTROOT = /tmp/SimpleAL.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
