@@ -16,14 +16,14 @@ A UIView category creates al_* properties that return a SimpleALViewProperty obj
 Let's say we want to use Auto Layout to left align a view that is 200 points wide and is as tall as its superview. We'll assume that there's a view called myView and it's contained by superView. With SimpleAL, that looks like this:
 
     [superView addConstraint:[myView.al_left equalToViewProperty:superView.al_left]];
-    [superView addConstraint:[myView.al_height lessThanOrEqualToViewProperty:superView.al_height]];
-    [superView addConstraint:[myView.al_width lessThanOrEqualToValue:200]];
+    [superView addConstraint:[myView.al_height equalToViewProperty:superView.al_height]];
+    [superView addConstraint:[myView.al_width equalToValue:200]];
 
 In Auto Layout, that looks like this:
 
-    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0]];
-    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqualTo toItem:superView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
-    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:200.0]];
 
 ##### Example 2
 
@@ -37,15 +37,15 @@ Inequalities, offsets, and multipliers are also important parts of Auto Layout a
 
 In Auto Layout, that looks like this:
 
-    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
-    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqualTo toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:superView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:10.0]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:superView attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0]];
 
 
 ##### Example 3
 
-Let's say we want to center a view horizontally and align its top with its super view's top. In SimpleAL, that looks like this:
+Let's say we want to center a view horizontally and align its top with its super view's top with a padding of 10.0. In SimpleAL, that looks like this:
 
-    [myView.al_top equalToViewProperty:superView.al_top offset:10];
+    [myView.al_top equalToViewProperty:superView.al_top offset:10.0];
     [myView.al_centerX equalToViewProperty:superView.al_centerX];
 
 In Auto Layout, that looks like this:
@@ -63,6 +63,6 @@ SimpleAL adds an NSArray category that allows you to use the al_* properties on 
 
 An equivalent standard AutoLayout expression for just the bottom line is (somewhat disturbingly):
 
-    [parentView addConstraints:@[[NSLayoutConstraint constraintWithItem:viewOne attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0],
-        [NSLayoutConstraint constraintWithItem:viewTwo attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0],
-        [NSLayoutConstraint constraintWithItem:viewThree attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqualTo toItem:nil attribute:0 multiplier:1.0 constant:200.0]]];
+    [parentView addConstraints:@[[NSLayoutConstraint constraintWithItem:viewOne attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:200.0],
+        [NSLayoutConstraint constraintWithItem:viewTwo attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:200.0],
+        [NSLayoutConstraint constraintWithItem:viewThree attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:200.0]]];
